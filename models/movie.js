@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
-const { URL_REGEX, INCORRECT_URL_FORMAT } = require("../utils/constants");
+const { INCORRECT_URL_FORMAT } = require("../utils/constants");
+const { URL_REGEX } = require("../middlewares/validation");
 
 const movieSchema = new mongoose.Schema({
   country: {
