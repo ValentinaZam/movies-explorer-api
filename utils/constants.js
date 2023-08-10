@@ -1,11 +1,10 @@
-const URL_REGEX = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&//=]*)/;
-
 const HTTP_STATUS_CREATED = 201;
 const HTTP_STATUS_BAD_REQUEST = 400;
 const HTTP_STATUS_UNAUTHORIZED = 401;
 const HTTP_STATUS_FORBIDDEN = 403;
 const HTTP_STATUS_NOT_FOUND = 404;
 const HTTP_STATUS_CONFLICT = 409;
+const SERVER_ERROR = 500;
 
 const INVALID_AUTH_CREDENTIALS = "Неправильные почта или пароль";
 const INVALID_EMAIL_FORMAT = "Некорректный email";
@@ -28,7 +27,7 @@ module.exports = {
   HTTP_STATUS_FORBIDDEN,
   HTTP_STATUS_NOT_FOUND,
   HTTP_STATUS_CONFLICT,
-  URL_REGEX,
+  SERVER_ERROR,
   INCORRECT_URL_FORMAT,
   INVALID_AUTH_CREDENTIALS,
   USER_NOT_FOUND,

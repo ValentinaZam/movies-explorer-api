@@ -1,7 +1,9 @@
-const errorHandler = (err, _, res, next) => {
-  const statusCode = err.statusCode || 500;
+const { SERVER_ERROR } = require("../utils/constants");
 
-  const message = statusCode === 500 ? "На сервере произошла ошибка" : err.message;
+const errorHandler = (err, _, res, next) => {
+  const statusCode = err.statusCode || SERVER_ERROR;
+
+  const message = statusCode === SERVER_ERROR ? "На сервере произошла ошибка" : err.message;
   res.status(statusCode).send({ message });
   next();
 };
