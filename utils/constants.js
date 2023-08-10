@@ -1,14 +1,11 @@
-const { config } = require("dotenv");
-
-const { NODE_ENV } = process.env;
-
-if (NODE_ENV === "production") {
-  config();
-}
-
-const { SECRET_SIGNING_KEY = "dev-secret" } = process.env;
-
 const URL_REGEX = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&//=]*)/;
+
+const HTTP_STATUS_CREATED = 201;
+const HTTP_STATUS_BAD_REQUEST = 400;
+const HTTP_STATUS_UNAUTHORIZED = 401;
+const HTTP_STATUS_FORBIDDEN = 403;
+const HTTP_STATUS_NOT_FOUND = 404;
+const HTTP_STATUS_CONFLICT = 409;
 
 const INVALID_AUTH_CREDENTIALS = "Неправильные почта или пароль";
 const INVALID_EMAIL_FORMAT = "Некорректный email";
@@ -25,7 +22,12 @@ const INCORRECT_URL_FORMAT = "Некорректный формат ссылки
 const INTERNAL_SERVER_ERROR = "Ошибка сервера";
 
 module.exports = {
-  SECRET_SIGNING_KEY,
+  HTTP_STATUS_CREATED,
+  HTTP_STATUS_BAD_REQUEST,
+  HTTP_STATUS_UNAUTHORIZED,
+  HTTP_STATUS_FORBIDDEN,
+  HTTP_STATUS_NOT_FOUND,
+  HTTP_STATUS_CONFLICT,
   URL_REGEX,
   INCORRECT_URL_FORMAT,
   INVALID_AUTH_CREDENTIALS,
