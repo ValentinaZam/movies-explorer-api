@@ -24,8 +24,8 @@ mongoose
 const app = express();
 
 const allowedCors = [
-  "https://project-mesto-deploy.nomoredomains.xyz",
-  "http://project-mesto-deploy.nomoredomains.xyz",
+  "https://cine-selecta.nomoreparties.co",
+  "http://cine-selecta.nomoreparties.co",
   "https://localhost:3000",
   "http://localhost:3001",
 ];
